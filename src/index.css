@@ -82,6 +82,7 @@ header h1 {
   position: relative;
   resize: vertical;
   z-index: -1;
+  cursor: text;
 }
 
 .test-recorder-output {

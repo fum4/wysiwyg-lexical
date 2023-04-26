@@ -88,14 +88,15 @@ export default function Editor() {
     ? 'Enter some rich text...'
     : 'Enter some plain text...';
   const placeholder = <Placeholder>{text}</Placeholder>;
-  const [floatingAnchorElem, setFloatingAnchorElem] =
-    useState<HTMLDivElement | null>(null);
-  const [isSmallWidthViewport, setIsSmallWidthViewport] =
-    useState<boolean>(false);
+  const [floatingAnchorElem, setFloatingAnchorElem] = useState<HTMLDivElement | null>(null);
+  const [isSmallWidthViewport, setIsSmallWidthViewport] = useState<boolean>(false);
 
   const onRef = (_floatingAnchorElem: HTMLDivElement) => {
     if (_floatingAnchorElem !== null) {
       setFloatingAnchorElem(_floatingAnchorElem);
+      _floatingAnchorElem.addEventListener('click', () => {
+        document.querySelector<HTMLDivElement>('.ContentEditable__root')?.focus();
+      })
     }
   };
 
