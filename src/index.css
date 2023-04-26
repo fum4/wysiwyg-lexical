@@ -1740,3 +1740,23 @@ hr.selected {
     visibility: hidden;
   }
 }
+
+@media (pointer: coarse) {
+  body {
+    padding: 0;
+  }
+
+  .toolbar {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .tree-view-output {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .editor-shell, .tree-view-output {
+    margin-bottom: 0;
+  }
+}
