@@ -13,6 +13,7 @@ import {PlainTextPlugin} from '@lexical/react/LexicalPlainTextPlugin';
 import {RichTextPlugin} from '@lexical/react/LexicalRichTextPlugin';
 import {TabIndentationPlugin} from '@lexical/react/LexicalTabIndentationPlugin';
 import {TablePlugin} from '@lexical/react/LexicalTablePlugin';
+import {OnChangePlugin} from '@lexical/react/LexicalOnChangePlugin';
 import useLexicalEditable from '@lexical/react/useLexicalEditable';
 import {useEffect, useState} from 'react';
 import {CAN_USE_DOM} from './utils/canUseDOM';
@@ -66,7 +67,7 @@ const skipCollaborationInit =
   window.parent != null && window.parent.frames.right === window;
 
 export default function Editor() {
-  const {historyState} = useSharedHistoryContext();
+  const { historyState } = useSharedHistoryContext();
   const {
     settings: {
       isCollab,
@@ -100,6 +101,10 @@ export default function Editor() {
     }
   };
 
+  const onChange = (editorState) => {
+    localStorage.setItem('draft', JSON.stringify(editorState));
+  };
+
   const cellEditorConfig = {
     namespace: 'Playground',
     nodes: [...TableCellNodes],
@@ -127,6 +132,7 @@ export default function Editor() {
   }, [isSmallWidthViewport]);
 
   useEffect(() => {
+    // Initialize with DOM view
     document.querySelector<HTMLButtonElement>('.debug-treetype-button')?.click();
   }, []);
 
@@ -150,9 +156,8 @@ export default function Editor() {
         <KeywordsPlugin />
         <SpeechToTextPlugin />
         <AutoLinkPlugin />
-        <CommentPlugin
-          providerFactory={isCollab ? createWebsocketProvider : undefined}
-        />
+        <OnChangePlugin onChange={onChange} />
+        <CommentPlugin providerFactory={isCollab ? createWebsocketProvider : undefined} />
         {isRichText ? (
           <>
             {isCollab ? (

@@ -106,15 +106,15 @@ function prepopulatedRichText() {
 
 function App() {
   const {
-    settings: {isCollab, emptyEditor, measureTypingPerf},
+    settings: { isCollab, emptyEditor, measureTypingPerf },
   } = useSettings();
 
   const initialConfig = {
     editorState: isCollab
       ? null
       : emptyEditor
-      ? undefined
-      : prepopulatedRichText,
+        ? undefined
+        : localStorage.getItem('draft') || prepopulatedRichText,
     namespace: 'Playground',
     nodes: [...PlaygroundNodes],
     onError: (error: Error) => {
@@ -129,7 +129,7 @@ function App() {
         <TableContext>
           <SharedAutocompleteContext>
             <header>
-              <a href="https://lexical.dev" target="_blank" rel="noopener">
+              <a href="#" rel="noopener">
                 <img src={logo} alt="Lexical Logo" />
               </a>
             </header>
