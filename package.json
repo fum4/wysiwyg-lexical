@@ -41,6 +41,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.21.4",
+    "@babel/helper-module-imports": "^7.21.4",
     "@babel/plugin-transform-flow-strip-types": "^7.21.0",
     "@babel/preset-react": "^7.18.6",
     "@rollup/plugin-babel": "^6.0.3",
