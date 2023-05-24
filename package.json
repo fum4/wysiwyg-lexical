@@ -1,5 +1,5 @@
 {
-  "name": "rinkt-text-editor",
+  "name": "wysiwyg-text-editor-lexical",
   "version": "0.10.0",
   "private": true,
   "scripts": {

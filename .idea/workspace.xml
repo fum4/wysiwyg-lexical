@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95455fc1-0c46-47ee-9b3a-d56f0c03cfd4" name="Changes" comment="Lexical logo">
-      <change afterPath="$PROJECT_DIR$/favicon.webp" afterDir="false" />
+    <list default="true" id="95455fc1-0c46-47ee-9b3a-d56f0c03cfd4" name="Changes" comment="Update package name">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +99,7 @@
       <workItem from="1682490633402" duration="3671000" />
       <workItem from="1682497236746" duration="15000" />
       <workItem from="1684957397739" duration="950000" />
-      <workItem from="1684960052281" duration="69000" />
+      <workItem from="1684960052281" duration="394000" />
     </task>
     <task id="LOCAL-00001" summary="Lexical logo">
       <created>1684957720734</created>
@@ -110,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684957720734</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update favicon and title">
+      <created>1684960136864</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684960136864</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +134,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Lexical logo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lexical logo" />
+    <MESSAGE value="Update favicon and title" />
+    <MESSAGE value="Update package name" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update package name" />
   </component>
 </project>
