@@ -10,7 +10,7 @@ import {SettingsContext, useSettings} from './context/SettingsContext';
 import {SharedAutocompleteContext} from './context/SharedAutocompleteContext';
 import {SharedHistoryContext} from './context/SharedHistoryContext';
 import Editor from './Editor';
-import logo from './images/logo.png';
+import logo from './images/logo.svg';
 import PlaygroundNodes from './nodes/PlaygroundNodes';
 import DocsPlugin from './plugins/DocsPlugin';
 import PasteLogPlugin from './plugins/PasteLogPlugin';
